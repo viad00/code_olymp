@@ -1,0 +1,29 @@
+begin
+  var n := ReadInteger();
+  var roses := new integer[n];
+  var count_roses := 0;
+  var violets := new integer[n];
+  var count_violets := 0;
+  for var i := 1 to n do
+  begin
+    if ReadInteger() = i mod 2 then
+      if i mod 2 = 0 then
+      begin
+        roses[count_roses] := i;
+        inc(count_roses);
+      end
+      else
+      begin
+        violets[count_violets] := i;
+        inc(count_violets);
+      end;
+  end;
+  if count_roses = count_violets then
+  begin
+    writeln(count_roses);
+    for var i := 0 to count_roses - 1 do
+      println(roses[i], violets[i]);
+  end
+  else
+    write(-1)
+end.
