@@ -1,0 +1,4 @@
+[Project]
+Name=session
+Manager=KDevCMakeManager
+VersionControl=kdevgit
